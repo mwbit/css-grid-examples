@@ -1,18 +1,17 @@
 .container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    
     grid-column-gap: 10px;
-    grid-row-gap: 25px;
+    grid-row-gap: 10px;
    
-    background-color: #3e2723;
+    background-color: cadetblue;
     padding: 10px;
     border-radius: 10px;
   }
   .item {
-    background-color: #80cbc4;
-    border: 1px solid #fff;
-    padding: 40px;
-    font-size: 30px;
+    background-color: blueviolet;
+    border: 1px solid grey;
+    padding: 50px;
+    font-size: 40px;
     text-align: center;
   }
