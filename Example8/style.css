@@ -1,0 +1,25 @@
+body {
+    margin: 40px;
+  }
+  
+  .box {
+    background-color: rgb(13, 68, 2);
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+  }
+  
+  .box:nth-child(even) {
+    background-color: rgb(106, 235, 224);
+    color: #000;
+  }
+  
+  .wrapper {
+    width: 600px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: 100px 100px 100px;
+    grid-auto-flow: column;
+  }
