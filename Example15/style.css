@@ -1,0 +1,152 @@
+/* By Andy Barefoot */
+body {
+    background-color: #02111B;
+    margin: 2.5vw;
+    font-size: 8vw;
+    font-family: 'Fontdiner Swanky', cursive;
+  }
+  #grid {
+    width: 95vw;
+    max-width: 2000px;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+    grid-gap: 1.5vw;
+  }
+  .star {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 0.5vw;
+    grid-row-gap: 1.5vw;
+  }
+  .star > div {
+    border-radius: 20px;
+  }
+  .photo {
+    grid-column-end: span 2;
+  }
+  .name {
+    grid-column-end: span 3;
+    line-height: 1em;
+  }
+  h1, h2{
+    display: block;
+    margin: 4%;
+    height: 60%;
+    padding: 10% 5% 0 5%;
+    border: 2.6vw #FFC857 dotted;
+    animation-name: lights;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  h1 {
+    font-size: 1.7em;  
+    line-height: 1.2em;
+    padding: 10% 5% 10% 5%;
+    text-align: center;
+  }
+  
+  
+  .name span:first-child{
+    display: block;
+    text-align: left;
+    color: #fafcff;
+  }
+  .name span:last-child{
+    display: block;
+    text-align: right;
+    color: #a1f1ff;
+  }
+  
+  img{
+    width: 90%;
+    margin: 5%;
+    border-radius: 15px;
+  }
+  
+  .name:last-child > h2{
+    animation-delay: 1s;
+  }
+  
+  
+  .star > .name:last-child{
+    grid-column: 1 /4;
+    grid-row: 2;
+  }
+  
+  .star:nth-child(3n+1) > .photo,
+  .star:nth-child(3n+2) > .name,
+  .star:nth-child(3n) > .name:last-child{
+    background-color: #c20000;
+  }
+  
+  .star:nth-child(3n) > .photo,
+  .star:nth-child(3n+1) > .name,
+  .star:nth-child(3n+2) > .name:last-child{
+    background-color: #4B7F52;
+  }
+  
+  .star:nth-child(3n+2) > .photo,
+  .star:nth-child(3n) > .name,
+  .star:nth-child(3n+1) > .name:last-child{
+    background-color: #0353A4;
+  }
+  
+  .star > div:nth-child(1){
+    transform:  perspective(50vw) rotateX(10deg) rotatey(-10deg);
+    z-index: 1;
+  }
+  .star > div:nth-child(2){
+    transform:  perspective(50vw) rotateX(-10deg) rotatey(10deg);
+    z-index: 1;
+  }
+  .star > div:nth-child(3){
+    transform:  perspective(50vw) rotateX(10deg) rotatey(10deg);
+    z-index: 1;
+  }
+  .star > div:nth-child(4){
+    transform:  perspective(50vw) rotateX(-10deg) rotatey(-10deg);
+    z-index: 1;
+  }
+  
+  #title{
+    width: 95%;
+    height: 95%;
+    z-indez: 3;
+    transform: perspective(50vw) rotateX(10deg) rotatey(-10deg) ;
+    background-color: #c20000;
+    border-radius: 30px;
+  }
+  
+  @media (min-width: 749px) {
+    body {
+      font-size: 4vw;
+    }
+    h1, h2{
+      border: 1.3vw #FFC857 dotted;
+    }
+  }
+  
+  @media (min-width: 1142px) {
+    body {
+      font-size: 2.5vw;
+    }
+    h1, h2{
+      border: 0.8vw #FFC857 dotted;
+    }
+  }
+  
+  @media (min-width: 1547px) {
+    body {
+      font-size: 2em;
+    }
+    h1, h2{
+      border: 0.5vw #FFC857 dotted;
+    }
+  }
+  
+  @keyframes lights {
+      0%   {border-color: #FFC857;}
+      50%  {border-color: #ffff91;}
+      100% {border-color: #FFC857;}
+  }
+  
